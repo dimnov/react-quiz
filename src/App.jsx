@@ -26,7 +26,6 @@ function reducer(state, action) {
         questions: action.payload,
         status: "ready",
       };
-
     case "dataFailed":
       return {
         ...state,
@@ -47,13 +46,13 @@ function reducer(state, action) {
         points:
           action.payload === question.correctOption ? state.points + question.points : state.points,
       };
-
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
-
     case "finish":
       return { ...state, status: "finished", answer: null };
-
+    case "restart": {
+      return { ...initialState, questions: state.questions, status: "ready" };
+    }
     default:
       throw new Error("Action is unknown");
   }
@@ -101,7 +100,9 @@ function App() {
             />
           </>
         )}
-        {status === "finished" && <FinishScreen points={points} totalPoints={totalPoints} />}
+        {status === "finished" && (
+          <FinishScreen points={points} totalPoints={totalPoints} dispatch={dispatch} />
+        )}
       </Main>
     </div>
   );
