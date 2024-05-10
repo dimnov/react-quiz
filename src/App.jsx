@@ -38,6 +38,7 @@ function reducer(state, action) {
         status: "active",
       };
     case "newAnswer":
+      // eslint-disable-next-line no-case-declarations
       const question = state.questions[state.index];
 
       return {
@@ -46,6 +47,9 @@ function reducer(state, action) {
         points:
           action.payload === question.correctOption ? state.points + question.points : state.points,
       };
+
+    case "nextQuestion":
+      return { ...state, index: state.index + 1, answer: null };
 
     default:
       throw new Error("Action is unknown");
