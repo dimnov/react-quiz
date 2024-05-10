@@ -6,6 +6,7 @@ import Loader from "./components/Loader.jsx";
 import Error from "./components/Error.jsx";
 import StartScreen from "./components/StartScreen.jsx";
 import Question from "./components/Question.jsx";
+import NextButton from "./components/NextButton.jsx";
 
 const initialState = {
   questions: [],
@@ -72,7 +73,10 @@ function App() {
         {status === "error" && <Error />}
         {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch} />}
         {status === "active" && (
-          <Question question={questions[index]} dispatch={dispatch} answer={answer} />
+          <>
+            <Question question={questions[index]} dispatch={dispatch} answer={answer} />
+            <NextButton dispatch={dispatch} answer={answer} />
+          </>
         )}
       </Main>
     </div>
