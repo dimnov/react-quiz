@@ -4,25 +4,29 @@
       "question": "Which is the most popular JavaScript framework?",
       "options": ["Angular", "React", "Svelte", "Vue"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "Which company invented React?",
       "options": ["Google", "Apple", "Netflix", "Facebook"],
       "correctOption": 3,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "What's the fundamental building block of React apps?",
       "options": ["Components", "Blocks", "Elements", "Effects"],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "What's the name of the syntax we use to describe the UI in React components?",
       "options": ["FBJ", "Babel", "JSX", "ES2015"],
       "correctOption": 2,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "How does data flow naturally in React apps?",
@@ -33,13 +37,15 @@
         "The developers decides"
       ],
       "correctOption": 0,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "How to pass data into a child component?",
       "options": ["State", "Props", "PropTypes", "Parameters"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "When to use derived state?",
@@ -50,7 +56,8 @@
         "Whenever the state can be computed from another state variable"
       ],
       "correctOption": 3,
-      "points": 30
+      "points": 30,
+      "category": "hard"
     },
     {
       "question": "What triggers a UI re-render in React?",
@@ -61,7 +68,8 @@
         "Adding event listeners to DOM elements"
       ],
       "correctOption": 2,
-      "points": 20
+      "points": 20,
+      "category": "medium"
     },
     {
       "question": "When do we directly \"touch\" the DOM in React?",
@@ -72,7 +80,8 @@
         "Almost never"
       ],
       "correctOption": 3,
-      "points": 20
+      "points": 20,
+      "category": "easy"
     },
     {
       "question": "In what situation do we use a callback to update state?",
@@ -83,7 +92,8 @@
         "When the new state depends on the previous state"
       ],
       "correctOption": 3,
-      "points": 30
+      "points": 30,
+      "category": "medium"
     },
     {
       "question": "If we pass a function to useState, when will that function be called?",
@@ -94,13 +104,15 @@
         "The first time we update the state"
       ],
       "correctOption": 2,
-      "points": 30
+      "points": 30,
+      "category": "medium"
     },
     {
       "question": "Which hook to use for an API request on the component's initial render?",
       "options": ["useState", "useEffect", "useRef", "useReducer"],
       "correctOption": 1,
-      "points": 10
+      "points": 10,
+      "category": "easy"
     },
     {
       "question": "Which variables should go into the useEffect dependency array?",
@@ -111,7 +123,8 @@
         "All variables needed for clean up"
       ],
       "correctOption": 2,
-      "points": 30
+      "points": 30,
+      "category": "medium"
     },
     {
       "question": "An effect will always run on the initial render.",
@@ -122,7 +135,8 @@
         "In depends on the code in the effect"
       ],
       "correctOption": 0,
-      "points": 30
+      "points": 30,
+      "category": "easy"
     },
     {
       "question": "When will an effect run if it doesn't have a dependency array?",
@@ -133,7 +147,638 @@
         "Each time the component is re-rendered"
       ],
       "correctOption": 3,
-      "points": 20
+      "points": 20,
+      "category": "easy"
+    },
+    {
+      "question": "Which company invented React?",
+      "options": ["Google", "Apple", "Netflix", "Facebook"],
+      "correctOption": 3,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What is React?",
+      "options": [
+        "A programming language",
+        "A framework for building user interfaces",
+        "A database management system",
+        "A design pattern"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What is JSX in React?",
+      "options": [
+        "JavaScript Syntax Extension",
+        "JavaScript XML",
+        "JavaScript XML Syntax",
+        "JavaScript XML Extension"
+      ],
+      "correctOption": 2,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What does React use to increase performance?",
+      "options": ["Virtual DOM", "Real DOM", "Shadow DOM", "HTML DOM"],
+      "correctOption": 0,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What function is called when a component is destroyed in React?",
+      "options": [
+        "componentWillUnmount",
+        "componentDidMount",
+        "componentWillMount",
+        "componentDidUpdate"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What is the latest version of React as of 2022?",
+      "options": ["16.x", "17.x", "18.x", "19.x"],
+      "correctOption": 1,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What hooks were introduced in React 16.8?",
+      "options": [
+        "useState and useEffect",
+        "useEffect and useContext",
+        "useEffect and useReducer",
+        "useState and useContext"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is React Fiber?",
+      "options": [
+        "A new rendering engine",
+        "A state management library",
+        "A utility for server-side rendering",
+        "A testing framework"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of React Router?",
+      "options": [
+        "State management",
+        "Server-side rendering",
+        "Client-side routing",
+        "Form handling"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is Redux in React?",
+      "options": [
+        "A state management library",
+        "A server-side rendering library",
+        "A testing framework",
+        "A router library"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of keys in React lists?",
+      "options": [
+        "To uniquely identify elements",
+        "To style elements",
+        "To loop through elements",
+        "To fetch data"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of PropTypes in React?",
+      "options": [
+        "To provide type checking for props",
+        "To style components",
+        "To manage component state",
+        "To define component lifecycle methods"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What are Higher-Order Components (HOC) in React?",
+      "options": [
+        "Components that are positioned higher in the component tree",
+        "Components that render other components",
+        "Components that enhance other components",
+        "Components that manage state"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of the render() method in React?",
+      "options": [
+        "To update the component's state",
+        "To render JSX elements",
+        "To fetch data from a server",
+        "To define component structure"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the significance of PureComponent in React?",
+      "options": [
+        "It renders components only once",
+        "It renders components more efficiently",
+        "It manages component state automatically",
+        "It prevents unnecessary re-renders"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of React portals?",
+      "options": [
+        "To manage state across components",
+        "To render components outside the DOM hierarchy",
+        "To create reusable components",
+        "To handle asynchronous actions"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the difference between controlled and uncontrolled components in React?",
+      "options": [
+        "Controlled components are stateless, uncontrolled components are stateful",
+        "Controlled components are managed by React, uncontrolled components are managed by the DOM",
+        "Controlled components use refs, uncontrolled components use event handlers",
+        "Controlled components update state, uncontrolled components update props"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What are React Hooks?",
+      "options": [
+        "Functions that let you use state and other React features without writing a class",
+        "Components that hook into the DOM directly",
+        "Functions that let you use external libraries in React",
+        "Components that manage state using hooks"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useRef() hook?",
+      "options": [
+        "To fetch data from a server",
+        "To reference DOM elements",
+        "To manage component state",
+        "To create reusable components"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useMemo() hook?",
+      "options": [
+        "To memoize expensive calculations",
+        "To update component state",
+        "To fetch data from a server",
+        "To manage component lifecycle"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useReducer() hook?",
+      "options": [
+        "To manage component state",
+        "To fetch data from a server",
+        "To create reusable components",
+        "To reference DOM elements"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is React?",
+      "options": [
+        "A programming language",
+        "A framework for building user interfaces",
+        "A database management system",
+        "A design pattern"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What does React use to increase performance?",
+      "options": ["Virtual DOM", "Real DOM", "Shadow DOM", "HTML DOM"],
+      "correctOption": 0,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What function is called when a component is destroyed in React?",
+      "options": [
+        "componentWillUnmount",
+        "componentDidMount",
+        "componentWillMount",
+        "componentDidUpdate"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "What is the latest version of React as of 2022?",
+      "options": ["16.x", "17.x", "18.x", "19.x"],
+      "correctOption": 1,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What hooks were introduced in React 16.8?",
+      "options": [
+        "useState and useEffect",
+        "useEffect and useContext",
+        "useEffect and useReducer",
+        "useState and useContext"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useMemo() hook?",
+      "options": [
+        "To memoize expensive calculations",
+        "To update component state",
+        "To fetch data from a server",
+        "To manage component lifecycle"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of keys in React lists?",
+      "options": [
+        "To uniquely identify elements",
+        "To style elements",
+        "To loop through elements",
+        "To fetch data"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of PropTypes in React?",
+      "options": [
+        "To provide type checking for props",
+        "To style components",
+        "To manage component state",
+        "To define component lifecycle methods"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What are Higher-Order Components (HOC) in React?",
+      "options": [
+        "Components that are positioned higher in the component tree",
+        "Components that render other components",
+        "Components that enhance other components",
+        "Components that manage state"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of the render() method in React?",
+      "options": [
+        "To update the component's state",
+        "To render JSX elements",
+        "To fetch data from a server",
+        "To define component structure"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the significance of PureComponent in React?",
+      "options": [
+        "It renders components only once",
+        "It renders components more efficiently",
+        "It manages component state automatically",
+        "It prevents unnecessary re-renders"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of React portals?",
+      "options": [
+        "To manage state across components",
+        "To render components outside the DOM hierarchy",
+        "To create reusable components",
+        "To handle asynchronous actions"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the difference between controlled and uncontrolled components in React?",
+      "options": [
+        "Controlled components are managed by React, uncontrolled components are managed by the DOM",
+        "Controlled components update state, uncontrolled components update props",
+        "Controlled components use refs, uncontrolled components use event handlers",
+        "Controlled components are stateless, uncontrolled components are stateful"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "When do we directly \"touch\" the DOM in React?",
+      "options": [
+        "When we need to listen to an event",
+        "When we need to change the UI",
+        "When we need to add styles",
+        "Almost never"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "In what situation do we use a callback to update state?",
+      "options": [
+        "When updating the state will be slow",
+        "When the updated state is very data-intensive",
+        "When the state update should happen faster",
+        "When the new state depends on the previous state"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "If we pass a function to useState, when will that function be called?",
+      "options": [
+        "On each re-render",
+        "Each time we update the state",
+        "Only on the initial render",
+        "The first time we update the state"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "Which hook to use for an API request on the component's initial render?",
+      "options": ["useState", "useEffect", "useRef", "useReducer"],
+      "correctOption": 1,
+      "points": 10,
+      "category": "easy"
+    },
+    {
+      "question": "Which variables should go into the useEffect dependency array?",
+      "options": [
+        "Usually none",
+        "All our state variables",
+        "All state and props referenced in the effect",
+        "All variables needed for clean up"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "An effect will always run on the initial render.",
+      "options": [
+        "True",
+        "It depends on the dependency array",
+        "False",
+        "In depends on the code in the effect"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of useRef() hook?",
+      "options": [
+        "To fetch data from a server",
+        "To reference DOM elements",
+        "To manage component state",
+        "To create reusable components"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useMemo() hook?",
+      "options": [
+        "To memoize expensive calculations",
+        "To update component state",
+        "To fetch data from a server",
+        "To manage component lifecycle"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useReducer() hook?",
+      "options": [
+        "To manage component state",
+        "To fetch data from a server",
+        "To create reusable components",
+        "To reference DOM elements"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "When to use derived state?",
+      "options": [
+        "Whenever the state should not trigger a re-render",
+        "Whenever the state can be synchronized with an effect",
+        "Whenever the state should be accessible to all components",
+        "Whenever the state can be computed from another state variable"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is Redux in React?",
+      "options": [
+        "A state management library",
+        "A server-side rendering library",
+        "A testing framework",
+        "A router library"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "When will an effect run if it doesn't have a dependency array?",
+      "options": [
+        "Only when the component mounts",
+        "Only when the component unmounts",
+        "The first time the component re-renders",
+        "Each time the component is re-rendered"
+      ],
+      "correctOption": 3,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useRef() hook?",
+      "options": [
+        "To fetch data from a server",
+        "To reference DOM elements",
+        "To manage component state",
+        "To create reusable components"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useMemo() hook?",
+      "options": [
+        "To memoize expensive calculations",
+        "To update component state",
+        "To fetch data from a server",
+        "To manage component lifecycle"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of the useReducer() hook?",
+      "options": [
+        "To manage component state",
+        "To fetch data from a server",
+        "To create reusable components",
+        "To reference DOM elements"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What triggers a UI re-render in React?",
+      "options": [
+        "Running an effect",
+        "Passing props",
+        "Updating state",
+        "Adding event listeners to DOM elements"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is Redux in React?",
+      "options": [
+        "A state management library",
+        "A server-side rendering library",
+        "A testing framework",
+        "A router library"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "category": "medium"
+    },
+    {
+      "question": "What is the purpose of keys in React lists?",
+      "options": [
+        "To uniquely identify elements",
+        "To style elements",
+        "To loop through elements",
+        "To fetch data"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "category": "hard"
+    },
+    {
+      "question": "What is the purpose of React.memo() in React?",
+      "options": [
+        "To memoize expensive calculations",
+        "To optimize rendering performance for functional components by memoizing the result",
+        "To manage component state",
+        "To create reusable components"
+      ],
+      "correctOption": 1,
+      "points": 40,
+      "category": "hard"
     }
   ]
 }
