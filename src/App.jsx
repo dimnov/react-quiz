@@ -16,19 +16,24 @@ const SECS_PER_QUESTION = 30;
 
 const initialState = {
   questions: [],
-  status: "loading",
+  status: "ready",
   index: 0,
   answer: null,
   points: 0,
   secondsRemaining: null,
+  questionsAnswered: 1,
+  category: "",
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case "dataReceived":
+      // eslint-disable-next-line no-case-declarations
+      const shuffledQuestions = action.payload.sort(() => Math.random() - 0.5);
       return {
         ...state,
-        questions: action.payload,
+        questions: shuffledQuestions,
+        displayedIndices: [],
         status: "ready",
       };
     case "dataFailed":
@@ -41,19 +46,34 @@ function reducer(state, action) {
         ...state,
         status: "active",
         secondsRemaining: state.questions.length * SECS_PER_QUESTION,
+        displayedIndices: [0],
       };
     case "newAnswer":
       // eslint-disable-next-line no-case-declarations
       const question = state.questions[state.index];
-
       return {
         ...state,
         answer: action.payload,
         points:
           action.payload === question.correctOption ? state.points + question.points : state.points,
+        questionsAnswered: state.questionsAnswered + 1, // Increment the number of questions answered
       };
     case "nextQuestion":
-      return { ...state, index: state.index + 1, answer: null };
+      // eslint-disable-next-line no-case-declarations
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * state.questions.length);
+      } while (state.displayedIndices.includes(randomIndex));
+
+      // eslint-disable-next-line no-case-declarations
+      const newDisplayedIndices = [...state.displayedIndices, randomIndex];
+
+      return {
+        ...state,
+        index: randomIndex,
+        answer: null,
+        displayedIndices: newDisplayedIndices,
+      };
     case "finish":
       return { ...state, status: "finished", answer: null };
     case "restart":
@@ -64,26 +84,40 @@ function reducer(state, action) {
         secondsRemaining: state.secondsRemaining - 1,
         status: state.secondsRemaining === 1 ? "finished" : state.status,
       };
+    case "loadingCategory":
+      return {
+        ...state,
+        status: "loading",
+        category: action.payload,
+      };
     default:
       throw new Error("Action is unknown");
   }
 }
 
 function App() {
-  const [{ questions, status, index, answer, points, secondsRemaining }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [
+    { questions, status, index, answer, points, secondsRemaining, questionsAnswered, category },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   const numQuestions = questions.length;
   const totalPoints = questions.reduce((prev, curr) => prev + curr.points, 0);
 
   useEffect(() => {
-    fetch("http://localhost:4000/questions")
-      .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
-      .catch(() => dispatch({ type: "dataFailed" }));
-  }, []);
+    console.log(category);
+    if (category) {
+      let url = `http://localhost:4000/questions?category=${category}`;
+
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          dispatch({ type: "dataReceived", payload: data });
+          dispatch({ type: "start" });
+        })
+        .catch(() => dispatch({ type: "dataFailed" }));
+    }
+  }, [category]);
 
   return (
     <div className="app">
@@ -96,11 +130,10 @@ function App() {
         {status === "active" && (
           <>
             <Progress
-              index={index}
               numQuestions={numQuestions}
               points={points}
               totalPoints={totalPoints}
-              answer={answer}
+              questionsAnswered={questionsAnswered}
             />
             <Question question={questions[index]} dispatch={dispatch} answer={answer} />
             <Footer>
@@ -110,6 +143,7 @@ function App() {
                 answer={answer}
                 index={index}
                 numQuestions={numQuestions}
+                questionsAnswered={questionsAnswered}
               />
             </Footer>
           </>
